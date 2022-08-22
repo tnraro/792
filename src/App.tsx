@@ -1,8 +1,13 @@
+import { Counter } from "./components/Counter";
+import { Window } from "./components/Window";
+
 function App() {
   return (
-    <div>
-      hello 792
-    </div>
+    <main>
+      <Window title="Counter">
+        <Counter />
+      </Window>
+    </main>
   )
 }
 
