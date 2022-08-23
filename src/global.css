@@ -56,6 +56,7 @@ base;
   body {
     font-family: var(--font-sans);
     color: var(--text-color);
+    background: hwb(43deg 53% 0%);
   }
 
   main {
@@ -71,17 +72,19 @@ base;
     display: flex;
     flex-flow: column;
     border-radius: 1em;
+    background: white;
     box-shadow:
-      1px 1px 2px hwb(220deg 47% 50% / 10%),
-      1px 1px 4px hwb(220deg 47% 50% / 10%),
-      1px 2px 8px hwb(220deg 47% 50% / 10%),
-      1px 2px 16px hwb(220deg 47% 50% / 10%);
+      1px 1px 2px hwb(43deg 47% 20% / 25%),
+      1px 1px 4px hwb(43deg 47% 20% / 25%),
+      1px 2px 8px hwb(43deg 47% 20% / 25%),
+      1px 2px 16px hwb(43deg 47% 20% / 25%);
     padding: 1em;
     gap: 1em;
   }
 
   div {
     display: flex;
+    box-sizing: border-box;
     gap: 1em;
   }
 
@@ -98,18 +101,18 @@ base;
   }
 
   button {
-    border: 1px solid var(--input-border-color);
+    background: hwb(43deg 77% 0%);
+    border: none;
     border-radius: var(--input-radius-size);
     padding: var(--input-padding-size);
-    background: white;
     color: var(--text-color);
     font-family: var(--font-sans);
     font-weight: 500;
   }
   button:hover, button:focus {
-    background: hwb(220deg 94% 5%);
+    background: hwb(43deg 67% 0%);
   }
   button:active {
-    background: hwb(220deg 90% 17%);
+    background: hwb(43deg 50% 0%);
   }
 }
