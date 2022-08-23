@@ -89,15 +89,28 @@ base;
   }
 
   input {
+    box-sizing: border-box;
     border: none;
     border-radius: var(--input-radius-size);
     padding: var(--input-padding-size);
-    background: white;
+    background: hwb(220deg 94% 5%);
     flex: 1 0;
     font-family: var(--font-sans);
   }
-  input:focus, input:active {
+
+  input:read-only {
+    background: white;
+  }
+
+  input:focus,
+  input:active {
     background: hwb(220deg 94% 5%);
+    outline: 2px solid hwb(43deg 17% 0%);
+  }
+
+  input:invalid,
+  input[aria-invalid="true"] {
+    outline: 2px solid hwb(7deg 17% 0%);
   }
 
   button {
@@ -109,9 +122,12 @@ base;
     font-family: var(--font-sans);
     font-weight: 500;
   }
-  button:hover, button:focus {
+
+  button:hover,
+  button:focus {
     background: hwb(43deg 67% 0%);
   }
+
   button:active {
     background: hwb(43deg 50% 0%);
   }

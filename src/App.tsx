@@ -1,4 +1,5 @@
 import { Counter } from "./components/Counter";
+import { TemperatureConverter } from "./components/TemperatureConverter";
 import { Window } from "./components/Window";
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
     <main>
       <Window title="Counter">
         <Counter />
+      </Window>
+      <Window icon="🌡️" title="TempConv">
+        <TemperatureConverter />
       </Window>
     </main>
   )
