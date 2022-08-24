@@ -69,19 +69,22 @@ export function TemperatureConverter() {
     { invalidInput: 0 },
   );
   return (
-    <div>
+    <div style={{ alignItems: "center" }}>
       <TemperatureUnitInput
         unit="celsius"
         dispatch={dispatch}
         value={state.celsius}
         isInvalid={(state.invalidInput & 0b1) === 0b1}
       />
+      <span>Celsius</span>
+      <span>=</span>
       <TemperatureUnitInput
         unit="fahrenheit"
         dispatch={dispatch}
         value={state.fahrenheit}
         isInvalid={(state.invalidInput & 0b10) === 0b10}
-      />
+        />
+        <span>Fahrenheit</span>
     </div>
   );
 }
